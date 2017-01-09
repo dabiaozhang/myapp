@@ -1,0 +1,9 @@
+@font-face {font-family:iconfont;src:url(iconfont.ttf?t=1460041043) format('truetype'); }
+[class^="icon-"], [class*=" icon-"] {font-family:"iconfont" !important;font-style:normal;-webkit-font-smoothing: antialiased;-webkit-text-stroke-width: 0.2px;-moz-osx-font-smoothing: grayscale;}
+.icon-006:before { content: "\e601"; }
+.icon-020:before { content: "\e602"; }
+.icon-062:before { content: "\e603"; }
+.icon-070:before { content: "\e604"; }
+.icon-037:before { content: "\e600"; }
+.icon-071:before { content: "\e605"; }
+.icon-072:before { content: "\e606"; }

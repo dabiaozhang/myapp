@@ -1,8 +1,4 @@
-#!/usr/bin/env node --exec babel-node --presets es2015,stage-2
 /*jshint esversion: 6 */
-/**
- * Module dependencies.
- */
 
 let app = require('../app');
 var debug = require('debug')('myapp:server');
