@@ -6,69 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta content="telephone=no" name="format-detection" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-<!--     <link href="static/css/busNative/style/iconfont.css" rel="stylesheet" />
-    <link href="static/css/busNative/style/evl.css" rel="stylesheet" /> -->
-    <script type="text/javascript" src="./webresource/3rd/require.text.js"></script>
     <script data-main="./webresource/config.js" type="text/javascript" src="./webresource/3rd/require.js"></script>
-
-<!--     <script type="text/javascript" src="./views/index.js"></script> -->
-<!--     <script type="text/javascript" src="static/js/busNative/iconfont.js"></script>
-    <script type="text/javascript" src="static/js/busNative/vue.min.js"></script>
-    <script type="text/javascript" src="static/js/busNative/vue-resource.min.js"></script>
-    <script type="text/javascript" src="static/js/busNative/require/jquery.min.js"></script> -->
     <style type="text/css">
-
-    .inpt{
-        width: 100%;
-        height: 2.3rem;
-        font-size: .8rem;
-        background: #ffffff;
-        border-radius: 3px;
-        border: none;
-        padding-left: .8rem;
-        color:#cccccc
-        .disable{}
-    }
-
-    .ic{
-        position: absolute;
-        margin-top: .7rem;
-        right: 2rem;
-        color: #999999;
-    }
-
-    /*向右箭头*/
-    .ord-arr-grey:after {
-      width: .3rem;
-      height: .3rem;
-      border-top: 0.1rem solid #cccccc;
-      border-right: 0.1rem solid #cccccc;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      transform: rotate(45deg);
-      position: absolute;
-      content: "";
-      right: .25rem;
-      top: 50%;
-      margin-top: -0.25rem;
-    }
-
-@font-face {
-  font-family: 'iconfont';
-  src: url('iconfont.eot');
-  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
-  url('./style/iconfont.woff') format('woff'),
-  url('iconfont.svg#iconfont') format('svg');
-}
-.iconfont{
-  font-family:"iconfont" !important;
-  font-size:0.65rem;font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
     [v-cloak] {
       display: none;
     }
@@ -76,104 +15,9 @@
 
 </head>
 <body>
-    <script type="text/javascript" data-main="./view/webresource">
 
 
-
-    window.onload=function(){
-/*
-require( ['preload'], function( preload) {
-
-});*/
-
-/*        var view = new Vue({
-            el: '#app',
-            data: {
-                activityData:null,
-                text:"",
-                noResultText: "",
-                stationStyle:"-webkit-transform: translate3d(0, 100%, 0);transform: translate3d(0, 100%, 0);",
-                isShowStation: false,
-                stationNow: "",
-                mobile: ""
-            },
-            computed: {
-
-            },
-
-            methods: {
-
-                onStationItem: function(item) {
-                    this.stationNow = item;
-                    this.closeStation();
-                },
-
-                openOpt: function() {
-                    this.stationStyle = "-webkit-transform:translate3d(0, 0, 0); w-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);";
-                    this.isShowStation = true; 
-                },
-
-                closeStation: function() {
-                    this.stationStyle = "-webkit-transform:translate3d(0, 100%, 0); w-webkit-transform: translate3d(0, 100%, 0);transform: translate3d(0, 100%, 0);";
-                    this.isShowStation = false;                      
-                },
-
-                submit: function() {
-                    var view = this;
-                    var data = {};
-                    data.head = headObj;
-
-                    this.$http({url:'http://gateway.qiche.tieyou.com/index.php?param=/api/home&v=1.0&method=product.getActivityLists', data:data, method:'POST'}).then(function (response) {
-                        view.activityData = response.data.return;
-                        if(!view.activityData || view.activityData.length === 0)
-                            view.noResultText = "暂无活动哟";
-                    }, function (response) {
-
-                    });
-
-                }
-            }
-        });*/
-        //view.submit();
-    };
-    </script>
-
-<!--     <div id="app" style="position: absolute;height: auto;width:100%;top: 0rem;bottom: 0rem;background: #f5f5f5;left: 0rem;">
-    <div  style='margin-top: 3rem;height: 100%;margin-left:1.5rem;margin-right: 1.5rem'>
-        <div style="text-align: center;font-size: 2.7rem;font-weight: 700; font-family: SimSun">恭喜您</div>
-        <div style="text-align: center;font-size: 1.6rem;font-weight: 500;font-family: SimSun;margin-top: .7rem">获得流量包一份</div>
-
-        <div style="margin-top: 2.75rem"><input class="inpt" v-model="mobile" placeholder="{{mobile ? '' : '请填写您的手机号'}}" ></input></div>
-
-        <div style="margin-top: .7rem" class=""><input class="inpt" @click="openOpt" readOnly="true" placeholder="{{otherNow ? '' : '请选择您的运营商'}}" v-model="stationNow"><i class="iconfont ic">&#xe609;</i></input></div>
-
-        <div @click='submit' style="margin-top: 1.5rem"><button style="width: 100%;height: 2.3rem;background:#ec645e;color: #fff;border: none;border-radius: 3px;font-size: .8rem">提交</button></div>
-
-        <div style="margin-top: 2.5rem">
-        <div style="color: #999999;">注：1、流量包为10M, 20M随机</div>
-        <div style="margin-top: .5rem; margin-left:2rem;color: #999999;">2、信息一经核验, 流量将在第一时间内充值到您的收集中</div>
-        </p>
-        </div>
-
-    </div>
-
-
-    <div class="tip-bot" style="{{stationStyle}}" >
-        <div class="cui-bg">
-            <h5>目的地车站</h5>
-            <ul class="station-list" v-bind:style="stationListStyle">
-                <li @click="onStationItem('移动')">移动</li>
-                <li @click="onStationItem('电信')">电信</li>
-                <li @click="onStationItem('联通')">联通</li>
-            </ul>
-        </div>
-    </div>
-
-   <div class="cui-mask" v-show="isShowStation" @click="closeStation()"></div>
-
-    </div>
- -->
-
+hello
 
 </body>
 </html>

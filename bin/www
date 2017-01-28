@@ -1,4 +1,5 @@
-#!/usr/bin/env node --exec babel-node --presets es2015,stage-2
+#!/usr/bin/env node 
+
 /*jshint esversion: 6 */
 /**
  * Module dependencies.

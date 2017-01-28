@@ -1,4 +1,4 @@
-require(['text!tpl_index'], 
-function(view) {
-
+require(['text!tpl_index','vue','vueResource'], 
+function(view,vue,vueResource) {
+	
 });
